@@ -1,0 +1,417 @@
+:root {
+    --theme-color: #CE1446;
+    --btn-color: #ff235e;
+    --white-color: #fff;
+    --black-color: #000;
+    --p-color: #454545;
+    --sec-pera: #d0d3d6;
+    --overlay-color: rgba(0, 0, 0, 0.696);
+    --h5-color: #cccccc;
+    --pink-gradient: linear-gradient(180deg, #000000b1 20%, #ce1446a2 100%);
+}
+
+.bg-grey {
+    background-color: #a69d9d;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 80px 0;
+}
+
+nav ul li {
+    margin: 0 5px;
+    font-size: 15px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.bg-black {
+    background-color: #000;
+}
+
+.btn {
+    outline: none;
+}
+
+
+/* HEADER */
+
+.navbar-toggler {
+    height: 30px;
+    width: 30px;
+    display: flex;
+}
+
+.navbar-toggler-icon {
+    height: 2px;
+    width: 100%;
+    background-color: var(--theme-color);
+}
+
+.navbar-toggler-icon::after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: var(--theme-color);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+}
+
+.navbar-toggler-icon::before {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: var(--theme-color);
+    position: absolute;
+    left: 0;
+    bottom: 8px
+}
+
+
+/* Banner  */
+
+.banner {
+    background-image: url(../imges/banner.jpg);
+    background-size: cover;
+}
+
+
+/* ABOUT US */
+
+.about {
+    background-image: url(../imges/about-bg-scaled.jpg);
+    background-size: cover;
+}
+
+
+/* Skill */
+
+.skill {
+    background-image: url(../imges/features.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.skill img {
+    width: 20%;
+}
+
+.skill_img img:last-child {
+    transform: scale(0);
+    transition: all 0.4s;
+}
+
+.skill_img img:first-child {
+    transform: scale(1);
+    transition: all 0.4s;
+}
+
+.SKILL:hover .skill_img img:last-child {
+    transform: scale(1);
+}
+
+.SKILL:hover .skill_img img:first-child {
+    transform: scale(0);
+}
+
+
+/* SERVICES  */
+
+.services {
+    background-image: url(../imges/services.jpg);
+    background-size: cover;
+}
+
+.services-item {
+    background-color: #000;
+}
+
+.ser-img {
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+.services-item:hover .ser-img {
+    opacity: 1;
+}
+
+.ser-icon img:last-child {
+    transform: scale(0);
+    transition: all 0.4s;
+}
+
+.ser-icon img:first-child {
+    transform: scale(1);
+    transition: all 0.4s;
+}
+
+.services-item:hover .ser-icon img:last-child {
+    transform: scale(1);
+}
+
+.services-item:hover .ser-icon img:first-child {
+    transform: scale(0);
+}
+
+
+/* protfolios */
+
+.protfolios li {
+    padding: 0 10px;
+}
+
+.protfolios li:first-child a ,header{
+    color: #CE1446 !important;
+}
+
+.pro_content {
+    width: 84%;
+    top: 100%;
+    padding: 30px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 8%;
+    transition: all 0.4s ease-in-out;
+}
+
+.portfolio:hover .pro_content {
+    top: 60%;
+}
+
+
+/* Client */
+
+.client {
+    background-image: url(../imges/testimonials.jpg);
+    background-size: cover;
+}
+
+
+/* JOURNAL */
+
+.jou-item::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: var(--overlay-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.jou-item::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: var(--pink-gradient);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9;
+    transform: translate(100%);
+}
+
+.jou-item:hover::before {
+    transform: translate(0%);
+}
+
+.jou-item {
+    overflow: hidden;
+}
+
+.jou-img {
+    transition: all 0.5s ease;
+}
+
+.jou-item:hover .jou-img {
+    transform: scale(1.1);
+}
+
+.jou-content {
+    bottom: 0;
+    z-index: 99;
+    padding: 0 30px 30px;
+}
+
+.jou-content h5 {
+    color: var(--h5-color);
+}
+
+.jou-item .jou-btn {
+    display: none;
+}
+
+.jou-item:hover .jou-btn {
+    display: inline-block;
+}
+
+.jou-btn {
+    padding: 15px 25px;
+    border: 2px solid var(--white-color);
+    background: none;
+    color: var(--white-color);
+    transition: all 0.2s linear;
+}
+
+.Client-1 {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    transition: all 0.4s ease;
+}
+
+.Client-img:hover .Client-1 {
+    bottom: 0;
+}
+
+.Client-2 {
+    transition: all 0.4s ease;
+}
+
+.Client-img:hover .Client-2 {
+    transform: translateY(100%);
+}
+
+.testimonial {
+    margin: 30px;
+}
+
+footer {
+    padding-top: 50px;
+}
+
+.footer-line::after {
+    content: '';
+    height: 4px;
+    width: 12px;
+    background-color: var(--theme-color);
+    position: absolute;
+    bottom: -19px;
+    left: 0;
+    border-radius: 2px;
+}
+
+.footer-item:hover h4::after {
+    width: 60px;
+}
+
+.footer-line::before {
+    content: '';
+    height: 4px;
+    width: 60px;
+    background-color: var(--theme-color);
+    position: absolute;
+    bottom: -19px;
+    right: 0;
+    left: 20px;
+    border-radius: 2px;
+}
+
+.footer-item:hover h4::before {
+    width: 12px;
+    left: 70px;
+    transition: all 0.1s linear;
+}
+
+.footer-icon i {
+    height: 40px;
+    width: 40px;
+    background-color: var(--black-color);
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px;
+    transition: all 0.3s linear;
+    margin-bottom: 10px;
+}
+
+.footer-icon i:hover {
+    background-color: var(--theme-color);
+}
+
+.footer_c {
+    padding-left: 40px;
+}
+
+.footer_c .input {
+    border: none;
+    width: 92%;
+    font-size: 13px;
+    padding: 20px 60px 20px 20px;
+    margin: 0;
+    color: #0a0a0a;
+    overflow: hidden;
+    border-radius: 0px;
+    background: #fff;
+}
+
+.footer_c .inputb {
+    color: #fff;
+    padding: 17px 30px;
+    font-size: 14px;
+    text-transform: capitalize;
+    outline: none;
+    transition: all .5s ease;
+    border-radius: 0 3px 3px 0;
+    margin-top: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+}
+
+.footer_boottom {
+    padding: 40px;
+}
+
+
+/* cooman */
+
+.carousel-indicators {
+    bottom: -90px !important;
+}
+
+.scroll {
+    text-align: center;
+    width: 50px;
+    bottom: 40px;
+    cursor: pointer;
+    position: fixed;
+    right: 40px;
+    z-index: 10;
+    padding: 10px;
+}
+
+.oc-form {
+    margin-top: 20px;
+}
+
+.oc-form1 {
+    margin-top: 50px;
+}
+
+.oc-icon {
+    margin-top: 45px;
+}
+
+.oc-icon i {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 10px;
+    border: 1px solid #808080;
+    text-align: center;
+}
+
+.oc-icon i:hover {
+    background-color: var(--theme-color);
+    border: var(--theme-color);
+}
